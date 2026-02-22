@@ -1,5 +1,4 @@
-/useless
 
 .venv
-/venv
 /venv312
+.vercel

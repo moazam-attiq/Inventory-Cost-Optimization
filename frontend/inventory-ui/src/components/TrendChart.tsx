@@ -17,8 +17,8 @@ interface Props {
 export default function TrendChart({ mlTrend, lstmTrend }: Props) {
   const data = mlTrend.map((val, idx) => ({
     day: idx + 1,
-    ML: val,
-    LSTM: lstmTrend[idx]
+    ML: Math.max(0, val),
+    LSTM: Math.max(0, lstmTrend[idx] ?? 0)
   }))
 
   return (
